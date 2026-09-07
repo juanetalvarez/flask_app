@@ -12,8 +12,6 @@ pipeline{
     stage('Setup Python Environment') {
       steps {
         sh '''
-        sudo apt update
-        sudo apt install -y python3-venv
         python3 -m venv $VENV
         . $VENV/bin/activate
         pip install --upgrade pip
