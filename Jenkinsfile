@@ -1,12 +1,12 @@
 pipeline{
-  agent { label 'linux-agent-new' }
+  agent { label 'mac-bycontroller-agent' }
   environment { 
     VENV = 'venv'
   }
   stages {
     stage('Checkout Code') {
       steps {
-        git branch: 'main', url: 'https://github.com/madhuri75jha/flask_app.git'
+        git branch: 'main', url: 'https://github.com/juanetalvarez/flask_app.git'
       }
     }
     stage('Setup Python Environment') {
